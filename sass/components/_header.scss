@@ -1,0 +1,46 @@
+header {
+  width: 100%;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header a {
+  text-decoration: none;
+  color: $color-navy-blue;
+}
+
+.sh-menu__bar {
+  padding: 1em;
+  padding-top: 1.5em;
+  color: $color-navy-blue;
+
+  & .icon-basket {
+    font-size: $text__h3;
+  }
+
+  & .icon-menu {
+    font-size: $text__h2;
+  }
+
+  & img {
+    max-height: 2em;
+  }
+}
+
+.sh-menu__bar div  {
+  position: relative;
+}
+
+.sh-menu__bar .sh-badge {
+  position: absolute;
+  top: -1em;
+  right: .5em;
+
+  @include breakpoint(mobile){
+    position: absolute;
+    top: -2em;
+    right: 1em;
+  }
+}

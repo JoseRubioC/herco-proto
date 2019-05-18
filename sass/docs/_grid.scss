@@ -1,0 +1,56 @@
+.column_1-half {
+
+}
+
+.columns_2 {
+	grid-template-columns: 1fr 1fr;
+
+}
+
+.columns_3 {
+ 	grid-template-columns: repeat(3, 1fr);
+}
+
+.columns_4 {
+ 	grid-template-columns: repeat(4, 1fr);
+}
+
+.columns_1-3 {
+ 	grid-template-columns: 300px 1fr;
+}
+
+@include breakpoint (mobile) {
+	.columns_2, .columns_3, .columns_4, .columns_1-3 {
+		grid-template-columns: 1fr;
+	}
+
+}
+
+.dflex {
+	display: flex;
+	align-items: flex-end;
+
+	button {
+		margin-right: 2em;
+		margin-top: 2em;
+	}
+
+	@include breakpoint (mobile) {
+		align-items: flex-start;
+		flex-direction: column;
+		}
+}
+
+.btn-box-example {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-color: $color-blue;
+	border-radius: 2px;
+	height: 6em;
+
+	@include breakpoint (mobile) {
+		flex-direction: column;
+		height: 20em;
+		}
+}
